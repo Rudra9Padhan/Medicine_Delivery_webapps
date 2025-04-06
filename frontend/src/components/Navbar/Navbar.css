@@ -1,0 +1,216 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Clean white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #f9f9f9; /* Slightly darker background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.navbar .logo {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #49557e;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+.navbar .active {
+    border-bottom: 2px solid #4CAF50; /* Green underline for active link */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar-right img {
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-right img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.navbar button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #e74c3c; /* Bright red for notification dot */
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+}
+/* Style for the search input */
+.navbar-search input {
+    width: 50%;
+    padding: 8px 15px;
+    border: 1px solid #b8f599c9;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  /* Style for the placeholder */
+  .navbar-search input::placeholder {
+    color: #aaa; /* Light gray color for the placeholder */
+    font-style: italic; /* Italicize the placeholder text */
+    font-size: 14px; /* Slightly smaller font size */
+    transition: color 0.3s ease;
+  }
+  
+  /* Change placeholder color on focus */
+  .navbar-search input:focus::placeholder {
+    color: #4CAF50; /* Green color when the input is focused */
+  }
+
+
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-profile-dropdown li:hover {
+    background-color: #f9f9f9;
+    color: #4CAF50;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+@media (max-width: 1015px) {
+    .navbar {
+        height: 60px;
+        padding: 5px 15px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 15px;
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar button {
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: 50px;
+    }
+    .navbar-menu {
+        gap: 10px;
+        font-size: 14px;
+    }
+    .navbar-right {
+        gap: 15px;
+    }
+    .navbar-right img {
+        width: 18px;
+    }
+    .navbar button {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}

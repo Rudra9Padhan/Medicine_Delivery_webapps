@@ -1,0 +1,27 @@
+.tracker-container {
+  padding: 80px;
+  text-align: center;
+}
+
+.leaflet-container {
+  height: 400px; /* Set the height for the map */
+  width: 100%; /* Set the width for the map */
+  border: 5px solid #ccc; /* Add a curb-like border */
+  border-radius: 10px; /* Optional: Add rounded edges for a smoother curb */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.tracker-container button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #66ff00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tracker-container button:hover {
+  background-color: #54b300;
+}

@@ -1,0 +1,70 @@
+.my-orders{
+    margin: 50px 0px;
+}
+.my-orders h2{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #454545;
+
+}
+.my-orders .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.my-orders-order{
+    display: flex; /* Keep flex for content alignment */
+    flex-direction: row; /* Arrange content horizontally */
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width for rectangular shape */
+    height: auto; /* Adjust height dynamically */
+    padding: 20px 30px; /* Adjusted padding for rectangular layout */
+    gap: 20px; /* Adjusted gap for better spacing */
+    border: 1px solid #ddd; /* Softer border color */
+    background-color: #fff; /* Background color for card effect */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+.my-orders-order:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+.my-orders-order img{
+    width: 50px;
+}
+.my-orders-order p span{
+    color: rgb(247, 53, 5);
+}
+.my-orders-order p b{
+    font-weight: 500;
+    color: #454545;
+}
+.my-orders-order button{
+    background-color: #ffe1e1;
+    border: none;
+    padding: 12px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(73, 77, 77);
+    display: block; /* Change from inline-block to block */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth hover effect */
+}
+.my-orders-order button:hover {
+    background-color: #f8d7da; /* Slightly darker shade for hover */
+    color: #333; /* Darker text color for better contrast */
+}
+@media (max-width:900px){
+    .my-orders-order{
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 10px; /* Increased row gap for better spacing */
+        font-size: 12px;
+    }
+    .my-orders-order button{
+        font-size: 10px;
+        padding: 10px 0px; /* Adjusted padding for smaller screens */
+    }
+}

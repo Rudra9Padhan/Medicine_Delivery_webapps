@@ -1,0 +1,145 @@
+/* Orders.css */
+
+/* Container for the entire orders page */
+.order-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  /* Page heading */
+  .order-container h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* List of orders */
+  .order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual order item */
+  .order-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+  }
+  
+  /* Parcel icon */
+  .parcel-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Order details section */
+  .order-details {
+    flex: 1;
+  }
+  
+  /* Medicine list in the order */
+  .order-item-medicine {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Customer name */
+  .order-item-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Address section */
+  .order-item-address p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  /* Phone number */
+  .order-item-phone {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  /* Order summary section */
+  .order-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    text-align: right;
+  }
+  
+  /* Item count and total amount */
+  .order-summary p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Medical report link */
+  .order-report a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .order-report a:hover {
+    text-decoration: underline;
+  }
+  
+  .order-report {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Order status dropdown */
+  .order-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  
+  .order-status label {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .order-status select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .order-status select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* No orders message */
+  .no-orders-message {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 50px;
+  }
+  

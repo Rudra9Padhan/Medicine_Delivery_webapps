@@ -1,0 +1,172 @@
+/* Dark background overlay */
+.login-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    backdrop-filter: blur(5px); /* Add blur effect for a modern look */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Centered capsule design */
+.login-popup-container {
+    display: flex;
+    width: max(50vw, 500px);
+    height: 350px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: background 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(0.9);
+    animation: popIn 0.5s forwards;
+}
+
+/* Login Background */
+.login-active .login-popup-container {
+    background: linear-gradient(to right, #d4fc79, #2be443);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Register Background */
+.register-active .login-popup-container {
+    background: linear-gradient(to right, #f7a71d, #fde298);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Left Side - Greeting Section */
+.login-popup-greeting {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.4rem; /* Slightly larger font */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+
+.login-popup-greeting button {
+    background: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 1px; /* Add spacing for a modern look */
+    transform: scale(1);
+    transition: all 0.3s, transform 0.2s;
+}
+
+.login-popup-greeting button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Add hover scaling */
+}
+
+/* Right Side - Form Section */
+.login-popup-form {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 30px 30px 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Add inner shadow */
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.login-popup-title img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-popup-inputs input {
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-popup-inputs input:focus {
+    border-color: #4caf50; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add glow effect */
+}
+
+.login-popup-form button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px; /* Add spacing */
+    transform: translateY(0);
+    transition: all 0.3s, transform 0.2s;
+}
+
+.login-popup-form button:hover {
+    background: #388e3c;
+    transform: translateY(-3px); /* Add hover lift effect */
+}
+
+/* Checkbox Terms */
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #555; /* Slightly darker text */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}

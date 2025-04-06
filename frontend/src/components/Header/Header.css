@@ -1,0 +1,123 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjusted height for better responsiveness */
+  overflow: hidden;
+  display: hidden;
+  margin: 10px auto;
+  background-color: rgb(40, 202, 40);
+  background-size: cover; /* Changed to cover for better image scaling */
+}
+
+.header-slider {
+  width: 100%;
+  height: 100%;
+}
+/* Caption Styling */
+.slider-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+  padding: 10px 15px;
+  border-radius: 5px;
+  max-width: 80%;
+}
+/* Slider Container */
+.slider-container {
+  width: 100%;
+  /* overflow: hidden; Hide overflowing slides */
+  position: relative;
+  height: 60vh; /* Adjusted height for better proportions */
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual Slide */
+.slider-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image fits within the container without cropping */
+  display: none; /* Hides the slider images */
+}
+
+/* Navigation Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #4CAF50; /* Highlight active dot */
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 2s;
+}
+
+.header-contents h2 {
+  font-weight: 400;
+  color: rgb(251, 180, 38);
+  font-size: max(4.5vw, 20px);
+}
+
+.header-contents p {
+  color: white;
+  font-size: 1vw;
+}
+
+
+@media (max-width: 1015px) {
+  .header {
+    height: 50vh; /* Adjusted for smaller screens */
+  }
+  .header-contents {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    height: 40vh; /* Further adjustment for very small screens */
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 2vw 4vw;
+  }
+}

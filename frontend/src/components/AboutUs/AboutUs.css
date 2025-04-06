@@ -1,0 +1,88 @@
+.about-us {
+  padding: 40px;
+  background-color: #f0f8ff; /* Light blue background for a fresh look */
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-us-title {
+  font-size: 28px;
+  color: #2c3e50; /* Dark slate for a professional look */
+  margin-bottom: 20px;
+}
+
+.about-us-title span {
+  color: #e74c3c; /* Vibrant red for emphasis */
+}
+
+.about-us-intro {
+  font-size: 16px;
+  color: #34495e; /* Muted dark blue for readability */
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.about-us-mission {
+  margin-bottom: 30px;
+}
+
+.about-us-mission h3 {
+  font-size: 22px;
+  color: #27ae60; /* Green for positivity and growth */
+  margin-bottom: 10px;
+}
+
+.about-us-mission p {
+  font-size: 16px;
+  color: #34495e; /* Consistent muted dark blue */
+  line-height: 1.6;
+}
+
+.about-us-features {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+  background-color: #ffffff; /* White background for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #3498db; /* Bright blue for icons */
+  margin-bottom: 10px;
+}
+
+.feature h4 {
+  font-size: 18px;
+  color: #2c3e50; /* Dark slate for headings */
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #7f8c8d; /* Gray for secondary text */
+  line-height: 1.4;
+}
+
+.about-us-thankyou {
+  font-size: 16px;
+  color: #34495e; /* Consistent muted dark blue */
+  margin-top: 20px;
+  line-height: 1.6;
+  font-style: italic; /* Italic for a personal touch */
+}
