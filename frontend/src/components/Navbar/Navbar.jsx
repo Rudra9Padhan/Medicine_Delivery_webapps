@@ -57,15 +57,6 @@ const Navbar = ({ setShowLogin }) => {
           Category
         </ScrollLink>
         <ScrollLink
-          to='about-section'
-          smooth={true}
-          duration={500}
-          onClick={() => setMenu("abouts")}
-          className={menu === "abouts" ? "active" : ""}
-        >
-          Abouts
-        </ScrollLink>
-        <ScrollLink
           to='contact-section'
           smooth={true}
           duration={500}
@@ -75,12 +66,21 @@ const Navbar = ({ setShowLogin }) => {
           Contact us
         </ScrollLink>
         <Link
+          to='/aboutus'
+          onClick={() => setMenu("aboutus")}
+          className={menu === "aboutus" ? "active" : ""}
+        >
+          About-us
+        </Link> 
+        
+        <Link
           to='/tracker'
           onClick={() => setMenu("tracker")}
           className={menu === "tracker" ? "active" : ""}
         >
           Live Tracking
         </Link> 
+        
       </ul>
 
       <div className="navbar-right">

@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="footer-content-right">
           <h2>GET IN TOUCH</h2>
           <ul>
-            <li>Call : +91-99999-11111</li>
+            <li>Call : +91-9178498927</li>
             <li>Email : contact@quickmeds.com</li>
           </ul>
           <h2>COMPANY</h2>

@@ -16,17 +16,20 @@
 /* Caption Styling */
 .slider-caption {
   position: absolute;
-  bottom: 15%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.5vw;
-  font-weight: 500;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
-  padding: 10px 15px;
-  border-radius: 5px;
-  max-width: 80%;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for contrast */
+  padding: 15px 30px; /* Adjusted padding */
+  border-radius: 8px;
+  text-align: center;
+  width: auto; /* Adjust to content */
+  max-width: 80%; /* Prevent excessive width */
+  box-sizing: border-box;
+  z-index: 10; /* Ensure caption is above the image */
 }
+
 /* Slider Container */
 .slider-container {
   width: 100%;

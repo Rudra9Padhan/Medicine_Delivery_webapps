@@ -9,6 +9,7 @@ import LoginPopup from './components/LoginPopup/LoginPopup';
 import Verify from './pages/Verify/Verify';
 import MyOrders from './pages/MyOrders/MyOrders';
 import UploadReport from './pages/View/UploadReport';
+import Aboutus from './pages/Aboutus/Aboutus'
 import Tracker from './components/Tracker/Tracker';
 import { ToastContainer } from 'react-toastify'; // Import ToastContainer
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/myorders' element={<MyOrders />} />
           <Route path='/view' element={<UploadReport />} />
           <Route path='/tracker' element={<Tracker />} />
+          <Route path='/aboutus' element={<Aboutus />}/>
         </Routes>
         </div>
       <Footer />

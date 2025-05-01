@@ -72,6 +72,7 @@ const onSubmitHandler = async (event) =>{
                         <option value="Cough & Cold">Cough & Cold</option>
                         <option value="Stomach Care">Stomach Care</option>
                         <option value="Diabetic Care">Diabetic Care</option>
+                        <option value="First Aid" > First Aid</option>
                     </select>
                 </div>
                 <div className="add-price flex-col">

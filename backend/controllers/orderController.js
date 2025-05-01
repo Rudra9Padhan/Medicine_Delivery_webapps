@@ -19,27 +19,28 @@ const placeOrder = async (req,res) =>{
     await newOrder.save();
     await userModel.findByIdAndUpdate(req.body.userId,{carrtData:{}});
 
-    const line_items = req.body.items.map((item)=>({
-        price_data:{
-            currency: "inr",
-            product_data:{
-                name:item.name
-            },
-            unit_amount:item.price*100*80
-        },
-        quantity:item.quantity
-    }))
-    line_items.push({
-        price_data:{
-            currency: "inr",
-            product_data:{
-                name:"Delivery Charges"
-            },
-            unit_amount:2.5*100*80
-        },
-        quantity:1
-    })
-
+    const line_items = req.body.items.map((item) => ({
+      price_data: {
+          currency: "inr",
+          product_data: {
+              name: item.name
+          },
+          unit_amount: item.price * 100, // ₹ to paise
+      },
+      quantity: item.quantity
+  }));
+  
+  line_items.push({
+      price_data: {
+          currency: "inr",
+          product_data: {
+              name: "Delivery Charges"
+          },
+          unit_amount: 2.5 * 100, // ₹2.50 in paise
+      },
+      quantity: 1
+  });
+  
     const session = await stripe.checkout.sessions.create({
         line_items:line_items,
         mode:"payment",
@@ -71,6 +72,33 @@ const placeOrder = async (req,res) =>{
     
  }
  }
+
+ 
+// Function to cancel an order
+const cancelOrder = async (req, res) => {
+  try {
+      const order = await orderModel.findOne({ _id: req.body.orderId, userId: req.body.userId });
+
+      if (!order) {
+          return res.json({ success: false, message: "Order not found or does not belong to user" });
+      }
+
+      // Check if the order can be cancelled (e.g., not already delivered or cancelled)
+      if (order.status === "Delivered" || order.status === "Cancelled") {
+          return res.json({ success: false, message: `Order is already ${order.status}` });
+      }
+
+      // Add more complex logic if needed (e.g., check if processing has started)
+
+      // Update the order status to "Cancelled"
+      await orderModel.findByIdAndUpdate(req.body.orderId, { status: "Cancelled" });
+      res.json({ success: true, message: "Order Cancelled" });
+
+  } catch (error) {
+      console.log("Error cancelling order:", error);
+      res.json({ success: false, message: "Error cancelling order" });
+  }
+};
 
  //user order for frontend
 const userOrders = async(req,res) =>{
@@ -130,4 +158,4 @@ const getOrderLocation = async (req, res) => {
   }
 }
 
-export {placeOrder,verifyOrder,userOrders,listOrders,updateStatus,getOrderLocation};
+export {placeOrder,verifyOrder,userOrders,listOrders,updateStatus,getOrderLocation, cancelOrder};

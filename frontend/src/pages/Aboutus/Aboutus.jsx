@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUs.css'; // Ensure the CSS file is updated for styling
+import './Aboutus.css'; // Ensure the CSS file is updated for styling
 import { FaHeartbeat, FaTruck, FaSmile } from 'react-icons/fa'; // Import icons for creativity
 
 const AboutUs = () => {

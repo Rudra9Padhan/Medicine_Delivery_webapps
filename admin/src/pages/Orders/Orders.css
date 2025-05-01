@@ -1,5 +1,43 @@
 /* Orders.css */
+/* ... existing styles ... */
 
+.order-item {
+  /* ... existing styles ... */
+  position: relative; /* Needed for absolute positioning */
+}
+
+/* Optional: Style the whole card differently if cancelled */
+.order-item.is-cancelled {
+  opacity: 0.75;
+  background-color: #fdf0f0; /* Light reddish background */
+}
+
+.admin-cancelled-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px; /* Position top-right */
+  width: 22px; /* Slightly smaller */
+  height: 22px;
+  background-color: #e53935; /* Red */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 2;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.admin-cancelled-indicator:hover {
+  transform: scale(1.1);
+}
+
+/* ... rest of existing styles ... */
 /* Container for the entire orders page */
 .order-container {
     padding: 20px;

@@ -1,70 +1,233 @@
-.my-orders{
-    margin: 50px 0px;
+.my-orders {
+    margin: 80px auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add horizontal padding */
+    max-width: 900px; /* Limit maximum width for better readability */
 }
-.my-orders h2{
-    padding: 30px;
-    font-size: 30px;
-    font-weight: 500;
-    color: #454545;
 
+.my-orders h2 {
+    font-size: clamp(24px, 5vw, 30px); /* Responsive font size */
+    font-weight: 600; /* Slightly bolder */
+    color: #333; /* Darker color for better contrast */
+    text-align: center; /* Center the text within the h2 block */
+    margin-bottom: 40px; /* Space below the heading */
+    padding-bottom: 10px; /* Space between text and border */
+    border-bottom: 2px solid #4CAF50; /* Accent border below text */
+    /* display: inline-block; Removed - h2 is block by default */
 }
-.my-orders .container{
+.my-orders-order {
+    /* ... existing grid/layout styles ... */
+    position: relative; /* Required for absolute positioning of the indicator */
+    /* Optional: Add styling for cancelled orders */
+}
+
+/* Optional: Style the whole card differently if cancelled */
+.my-orders-order.is-cancelled {
+    opacity: 0.7; /* Example: Make cancelled orders slightly faded */
+    background-color: #f8f8f8; /* Example: Slightly different background */
+}
+
+
+/* ... existing styles ... */
+
+.cancelled-indicator {
+    position: absolute;
+    top: 8px;
+    /* left: 8px; */ /* Remove or comment out left */
+    right: 8px; /* Add right positioning */
+    width: 24px;
+    height: 24px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cancelled-indicator:hover {
+    transform: scale(1.1);
+}
+
+/* ... rest of existing styles ... *//* Center the heading container if needed */
+.my-orders > div:first-of-type { /* Target the div containing h2 if it exists */
+    text-align: center;
+}
+
+
+.my-orders .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 25px; /* Increased gap between orders */
+    /* Removed margin-top, handled by h2 margin-bottom */
 }
-.my-orders-order{
-    display: flex; /* Keep flex for content alignment */
-    flex-direction: row; /* Arrange content horizontally */
-    justify-content: space-between; /* Space out content */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Full width for rectangular shape */
-    height: auto; /* Adjust height dynamically */
-    padding: 20px 30px; /* Adjusted padding for rectangular layout */
-    gap: 20px; /* Adjusted gap for better spacing */
-    border: 1px solid #ddd; /* Softer border color */
-    background-color: #fff; /* Background color for card effect */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+
+.my-orders-order {
+    display: grid;
+    grid-template-columns: 50px 1fr auto; /* Icon, Main Content, Buttons */
+    grid-template-areas:
+        "icon items   buttons"
+        "icon amount  buttons"
+        "icon count   buttons"
+        "icon status  buttons"
+        "icon date    buttons";
+    gap: 5px 20px; /* Row gap, Column gap */
+    align-items: center;
+    padding: 20px; /* Consistent padding */
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    border-radius: 10px; /* Slightly more rounded corners */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    transition: box-shadow 0.3s ease;
 }
+
 .my-orders-order:hover {
-    transform: translateY(-3px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
 }
-.my-orders-order img{
+
+.my-orders-order img {
+    grid-area: icon;
     width: 50px;
+    align-self: start; /* Align icon to the top */
+    margin-top: 5px; /* Adjust vertical alignment */
 }
-.my-orders-order p span{
-    color: rgb(247, 53, 5);
+
+/* Assign grid areas to paragraphs */
+.my-orders-order p:nth-of-type(1) { grid-area: items; }
+.my-orders-order p:nth-of-type(2) { grid-area: amount; }
+.my-orders-order p:nth-of-type(3) { grid-area: count; }
+.my-orders-order p:nth-of-type(4) { grid-area: status; } /* Status paragraph */
+.my-orders-order .order-date { grid-area: date; } /* Date paragraph */
+
+
+.my-orders-order p {
+    margin: 2px 0; /* Reduced vertical margin */
+    color: #555; /* Slightly darker text */
+    line-height: 1.5; /* Improved line spacing */
 }
-.my-orders-order p b{
-    font-weight: 500;
-    color: #454545;
+
+.my-orders-order p b { /* Style the status text */
+    font-weight: 600;
+    color: #333;
 }
-.my-orders-order button{
-    background-color: #ffe1e1;
+
+.order-date {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px; /* Add some space above the date */
+}
+
+.order-buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    align-self: center; /* Vertically center buttons */
+}
+
+.my-orders-order button {
+    padding: 9px 16px; /* Slightly adjusted padding */
     border: none;
-    padding: 12px 0px;
-    border-radius: 4px;
+    color: white;
+    border-radius: 6px; /* Consistent border-radius */
     cursor: pointer;
-    color: rgb(73, 77, 77);
-    display: block; /* Change from inline-block to block */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth hover effect */
+    font-size: 13px;
+    font-weight: 500; /* Medium weight */
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 110px; /* Ensure buttons have minimum width */
 }
+
 .my-orders-order button:hover {
-    background-color: #f8d7da; /* Slightly darker shade for hover */
-    color: #333; /* Darker text color for better contrast */
+    opacity: 0.9;
 }
-@media (max-width:900px){
-    .my-orders-order{
-        grid-template-columns: 1fr 2fr 1fr;
-        row-gap: 10px; /* Increased row gap for better spacing */
-        font-size: 12px;
+.my-orders-order button:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+.track-button {
+    background-color: #4CAF50; /* Consistent green */
+}
+.track-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.cancel-button {
+    background-color: #f44336; /* Standard red */
+}
+.cancel-button:hover {
+    background-color: #e53935; /* Darker red */
+}
+
+/* Status dot styling */
+.status-dot {
+    margin-right: 6px;
+    font-size: 18px;
+    vertical-align: middle; /* Align dot better with text */
+}
+/* Using more descriptive class names if possible, otherwise keep original */
+.status-food-processing, .status-processing { color: #ff9800; } /* Standard Orange */
+.status-out-for-delivery { color: #2196F3; } /* Standard Blue */
+.status-delivered { color: #4CAF50; } /* Standard Green */
+.status-cancelled { color: #f44336; } /* Standard Red */
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .my-orders-order {
+        grid-template-columns: 50px 1fr; /* Icon, Content */
+        grid-template-areas:
+            "icon items"
+            "icon amount"
+            "icon count"
+            "icon status"
+            "icon date"
+            "icon buttons"; /* Buttons below content */
+        gap: 5px 15px;
     }
-    .my-orders-order button{
-        font-size: 10px;
-        padding: 10px 0px; /* Adjusted padding for smaller screens */
+    .order-buttons {
+        flex-direction: row; /* Buttons side-by-side */
+        justify-content: flex-start; /* Align buttons to start */
+        margin-top: 10px;
+        align-self: start; /* Align buttons container to start */
+    }
+}
+
+@media (max-width: 480px) {
+    .my-orders h2 {
+        margin-bottom: 30px;
+    }
+    .my-orders-order {
+        padding: 15px;
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-areas: /* Redefine areas for single column */
+            "icon"
+            "items"
+            "amount"
+            "count"
+            "status"
+            "date"
+            "buttons";
+        text-align: center; /* Center text */
+    }
+    .my-orders-order img {
+        margin: 0 auto 15px auto; /* Center icon */
+        width: 45px;
+    }
+    .order-buttons {
+        justify-content: center; /* Center buttons */
+        flex-direction: column; /* Stack buttons vertically again */
+        align-items: center; /* Center buttons */
+        width: 100%;
+    }
+    .my-orders-order button {
+        width: 80%; /* Make buttons wider */
+        max-width: 200px;
     }
 }

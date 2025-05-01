@@ -1,5 +1,11 @@
 import mongoose from "mongoose";
 
 export const connectDB = async ()=>{
-    await mongoose.connect('mongodb+srv://rudrapadhan:93745219@cluster0.zfyro.mongodb.net/medicine_delivery_webapps').then(()=>console.log("Db connected"));
+    const dbURI = process.env.MONGO_URI;
+    if (!dbURI) {
+        throw new Error("MONGO_URI is not defined in the environment variables");
+    }
+    await mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+        .then(() => console.log("Db connected"))
+        .catch((err) => console.error("Db connection error:", err));
 }
