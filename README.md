@@ -16,11 +16,11 @@ This repository contains a web application designed to facilitate the delivery o
   
 ## Tech Stack
 - **Frontend**: JavaScript, CSS, HTML
-   - JavaScript for dynamic functionalities
+   - ReactJS for dynamic functionalities
    - CSS for styling
    - HTML for structure
-- **Backend**: (Add your backend details here, if applicable)
-- **Database**: (Specify the database being used, if any)
+- **Backend**: Nodejs , ExpressJs
+- **Database**: MongoDb
 
 ## Installation
 1. Clone the repository:
