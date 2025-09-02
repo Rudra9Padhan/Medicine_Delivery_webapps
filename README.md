@@ -14,10 +14,10 @@
 This repository contains a web application designed to facilitate the delivery of medicines. The application leverages modern web technologies to provide a seamless user experience for ordering and tracking medicines.
 
 ## Features
-- **User-friendly Interface**: Easy navigation and ordering process.
-- **Medicine Catalog**: Browse and search for medicines with detailed descriptions.
-- **Order Tracking**: Real-time updates on order status.
-- **Secure Payments**: Integration with secure payment gateways.
+- **User-friendly Interface** : Easy navigation and ordering process.
+- **Medicine Catalog** : Browse and search for medicines with detailed descriptions.
+- **Order Tracking** : Real-time updates on order status.
+- **Secure Payments** : Integration with secure payment gateways.
   
 ## Tech Stack
 - **Frontend**: JavaScript, CSS, HTML
