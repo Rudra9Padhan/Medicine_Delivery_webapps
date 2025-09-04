@@ -46,10 +46,12 @@ This repository contains a web application designed to facilitate the delivery o
    ```
 
 ## Usage
+
 - Open your browser and navigate to `http://localhost:3000` (or the port specified).
 - Sign up or log in to begin using the app.
 
 ## Contributing
+
 Contributions are welcome! Please follow the steps below:
 1. Fork the repository.
 2. Create a new branch:
