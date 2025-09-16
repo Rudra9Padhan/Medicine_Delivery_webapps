@@ -30,12 +30,12 @@ This repository contains a web application designed to facilitate the delivery o
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Rudra9Padhan/Medicine_Delivery_webapps.git
+   url
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Medicine_Delivery_webapps
-   ```
+   url
+    ```
 3. Install dependencies: (if applicable)
    ```bash
    npm install
