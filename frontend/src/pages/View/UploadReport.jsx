@@ -53,7 +53,7 @@ function UploadReport() {
     }
   };
 
-  // Fetch files on component mount
+  // Fetch files on component
   useEffect(() => {
     fetchFiles();
   }, []);
@@ -73,7 +73,7 @@ function UploadReport() {
         </button>
       </div>
 
-      <h2 className="subtitle">Your Files</h2>
+      <h2 className="subtitle">Your File</h2>
       <ul className="file-list">
         {files.map((file) => (
           <li key={file._id} className="file-item">
