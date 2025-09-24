@@ -47,7 +47,7 @@ const AdminAuth = () => {
   return (
     <div className="admin-auth">
       <ToastContainer />
-      <h2>{isLogin ? 'Admin Login' : 'Admin Signup'}</h2>
+      <h2>{isLogin ? 'Admin Login' : 'Admin Sign_up'}</h2>
       <form onSubmit={handleAuth}>
         <input
           type="email"
@@ -75,7 +75,7 @@ const AdminAuth = () => {
         <button type="submit">{isLogin ? 'Login' : 'Signup'}</button>
       </form>
       <p onClick={() => setIsLogin(!isLogin)} className="toggle-auth">
-        {isLogin ? "Don't have an account? Signup" : 'Already have an account? Login'}
+        {isLogin ? "Don't have an account? Signup" : 'Already have an Account? Login'}
       </p>
     </div>
   );
