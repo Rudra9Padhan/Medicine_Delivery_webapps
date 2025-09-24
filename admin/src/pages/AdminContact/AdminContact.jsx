@@ -15,7 +15,7 @@ const AdminContact = () => {
           alert('Failed to fetch contact submissions.');
         }
       } catch (error) {
-        alert('An error occurred while fetching contact submissions.');
+        alert('An error occurred while fetching contact Submissions.');
       }
     };
 
