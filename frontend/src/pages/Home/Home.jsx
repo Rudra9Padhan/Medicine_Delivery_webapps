@@ -10,11 +10,11 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div id="category-section"> {/* Add id for Category section */}
+      <div id="category-section"> {/* Add id for Category Section */}
         <Category category={category} setCategory={setCategory} />
         <MedicineDisplay category={category} />
       </div>
-      <div id="contact-section"> {/* Added id for Contact section */}
+      <div id="contact-section"> {/* Added id for Contact Section */}
       </div>
     </div>
   );
