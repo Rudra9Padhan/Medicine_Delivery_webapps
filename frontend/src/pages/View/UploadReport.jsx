@@ -28,7 +28,7 @@ function UploadReport() {
       alert(response.data.message);
       fetchFiles(); // Refresh file list
     } catch (error) {
-      alert("Error uploading file");
+      alert("Error Uploading File");
     }
   };
 
