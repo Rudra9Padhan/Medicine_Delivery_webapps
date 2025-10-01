@@ -5,15 +5,15 @@
 # Products :
 
 ![Screenshot 2025-04-01 165059](https://github.com/user-attachments/assets/bf674079-08ca-4c94-a929-b7a573319846)
-# QuickView
+# QuickView :
 
 ![Screenshot 2025-04-01 165133](https://github.com/user-attachments/assets/6c1dea50-96fc-4d7d-a4fe-25a65b338ee4)
 
 
-## Overview
+## Overview :
 This repository contains a web application designed to facilitate the delivery of medicines. The application leverages modern web technologies to provide a seamless user experience for ordering and tracking medicines.
 
-## Features
+## Features :
 - **User-friendly Interface** : Easy navigation and ordering process.
 - **Medicine Catalog** : Browse and search for medicines with detailed descriptions.
 - **Order Tracking** : Real-time updates on order status.
