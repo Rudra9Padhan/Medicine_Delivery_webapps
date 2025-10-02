@@ -19,7 +19,7 @@ This repository contains a web application designed to facilitate the delivery o
 - **Order Tracking** : Real-time updates on order status.
 - **Secure Payments** : Integration with secure payment gateways.
   
-## Tech Stack
+## Tech Stack :
 - **Frontend**: JavaScript, CSS, HTML
    - ReactJS for dynamic functionalities
    - CSS for styling
@@ -27,7 +27,7 @@ This repository contains a web application designed to facilitate the delivery o
 - **Backend**: Nodejs , ExpressJs
 - **Database**: MongoDb
 
-## Installation
+## Installation :
 1. Clone the repository:
    ```bash
    url
@@ -45,12 +45,12 @@ This repository contains a web application designed to facilitate the delivery o
    npm start
    ```
 
-## Usage
+## Usage :
 
 - Open your browser and navigate to `http://localhost:3000` (or the port specified).
 - Sign up or log in to begin using the app.
 
-## Contributing
+## Contributing :
 
 Contributions are welcome! Please follow the steps below:
 1. Fork the repository.
