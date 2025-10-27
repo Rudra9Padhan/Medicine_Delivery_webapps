@@ -21,9 +21,9 @@ This repository contains a web application designed to facilitate the delivery o
   
 ## Tech Stack :
 - **Frontend**: JavaScript, CSS, HTML
-   - ReactJS for dynamic functionalities
-   - CSS for styling
-   - HTML for structure
+   - ReactJS for dynamic functionalities.
+   - CSS for styling.
+   - HTML for structure.
 - **Backend**: Nodejs , ExpressJs
 - **Database**: MongoDb
 
