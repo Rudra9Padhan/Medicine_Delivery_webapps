@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 // Provider component
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://localhost:4000";
+  const url = "https://medicine-delivery-webapps.onrender.com";
   const [token, setToken] = useState("");
   const [med_list, setMedicineList] = useState([]);
   
